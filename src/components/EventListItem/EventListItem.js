@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import './EventListItem.css';
 import { GridListTile, GridListTileBar, Button } from '@material-ui/core';
 
+const baseUrl = process.env.PUBLIC_URL;
+
 class EventListItem extends Component {
 
   static defaultProps = {
@@ -31,7 +33,7 @@ class EventListItem extends Component {
       <>
         <GridListTile
           component={Button}
-          href={`/events/${this.props.id}`}
+          href={`${baseUrl}/events/${this.props.id}`}
         >
         <div style={{ backgroundImage:`url(${this.props.eventIcon})`, width:250, height: 250}}></div>
           {/* <img src={this.props.eventIcon} alt={this.props.eventTitle} /> */}
