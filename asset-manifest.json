@@ -1,7 +1,7 @@
 {
   "main.css": "/lazyness-radar/static/css/main.4e48b43b.chunk.css",
-  "main.js": "/lazyness-radar/static/js/main.fd5e0b67.chunk.js",
-  "main.js.map": "/lazyness-radar/static/js/main.fd5e0b67.chunk.js.map",
+  "main.js": "/lazyness-radar/static/js/main.ad1b163e.chunk.js",
+  "main.js.map": "/lazyness-radar/static/js/main.ad1b163e.chunk.js.map",
   "static/css/1.5ddc6f5b.chunk.css": "/lazyness-radar/static/css/1.5ddc6f5b.chunk.css",
   "static/js/1.f5a29b49.chunk.js": "/lazyness-radar/static/js/1.f5a29b49.chunk.js",
   "static/js/1.f5a29b49.chunk.js.map": "/lazyness-radar/static/js/1.f5a29b49.chunk.js.map",
@@ -11,6 +11,6 @@
   "static/css/main.4e48b43b.chunk.css.map": "/lazyness-radar/static/css/main.4e48b43b.chunk.css.map",
   "static/css/1.5ddc6f5b.chunk.css.map": "/lazyness-radar/static/css/1.5ddc6f5b.chunk.css.map",
   "index.html": "/lazyness-radar/index.html",
-  "precache-manifest.bafc953277bedf10f18a8df8868d8283.js": "/lazyness-radar/precache-manifest.bafc953277bedf10f18a8df8868d8283.js",
+  "precache-manifest.e392c5e140c13a398adcbe927d331b1b.js": "/lazyness-radar/precache-manifest.e392c5e140c13a398adcbe927d331b1b.js",
   "service-worker.js": "/lazyness-radar/service-worker.js"
 }
