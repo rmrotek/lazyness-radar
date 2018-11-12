@@ -3,7 +3,6 @@ import "./EventParticipantListItem.css";
 import { Typography, Paper, Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
-const baseUrl = process.env.PUBLIC_URL;
 
 class EventParticipantListItem extends Component {
   render() {
@@ -11,7 +10,7 @@ class EventParticipantListItem extends Component {
         <Button>
           <Paper
             component={Link}
-            to={`${baseUrl}/user/${this.props.id}`}
+            to={`/user/${this.props.id}`}
             style={{ 
               textDecoration: 'none',
               width: 150

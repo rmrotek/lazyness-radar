@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './EventListItem.css';
-import { GridListTile, GridListTileBar, Button } from '@material-ui/core';
+import { GridListTile, GridListTileBar } from '@material-ui/core';
 import { Link } from "react-router-dom";
 
 
-const baseUrl = process.env.PUBLIC_URL;
+
 
 class EventListItem extends Component {
 
@@ -35,7 +35,7 @@ class EventListItem extends Component {
 
       <GridListTile
         component={Link}
-        to={`${baseUrl}/events/${this.props.id}`}
+        to={`/events/${this.props.id}`}
       >
         <div style={{ backgroundImage: `url(${this.props.eventIcon})`, width: 250, height: 250 }}></div>
         {/* <img src={this.props.eventIcon} alt={this.props.eventTitle} /> */}

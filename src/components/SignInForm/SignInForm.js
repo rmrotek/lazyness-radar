@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import firebase from 'firebase'
 import { TextField, Button, Grid } from '@material-ui/core';
 
-const baseUrl = process.env.PUBLIC_URL;
 
 class SignInForm extends Component {
   state = {
@@ -39,7 +38,7 @@ class SignInForm extends Component {
     ).then(
       () => this.setState({ error: null })
     ).then(
-      () => this.props.history.push(baseUrl+'/')
+      () => this.props.history.push('/')
     ).catch(
       error => {
         this.setState({ error: error.message })
