@@ -34,7 +34,7 @@ class App extends Component {
     return (
       
       <>
-        <Router>
+        <Router basename={'/lazyness-radar'}>
           <div >
             <AppBar position='static'>
               <Toolbar>
