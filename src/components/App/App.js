@@ -31,7 +31,7 @@ class App extends Component {
 
     return (
       <>
-        <Router>
+        <Router basename={'/lazyness-radar'}>
           <div >
             <AppBar position='static'>
               <Toolbar>
@@ -85,18 +85,18 @@ class App extends Component {
                   Create Event
                 </MenuItem>
               }
-              <MenuItem
+              {/* <MenuItem
                 component={'a'}
                 href={"http://zdeterminowane-leniwce.jfdd10.is-academy.pl/"}
                 onClick={this.handleClose}
               >
                 Landing page
-              </MenuItem>
+              </MenuItem> */}
             </Menu>
 
             <Typography paragraph></Typography>
 
-            <Route exact path="/" component={HomeView} />
+            <Route exact path="lazyness-radar/" component={HomeView} />
             <Route exact path="/user" component={() => <h1> You shouldnt be here</h1>} />
             <Route path="/user/:userId" component={UserProfileView} />
 
