@@ -3,7 +3,6 @@ import { withAuthContext } from "../../contexts/AuthContext";
 import { Link } from "react-router-dom";
 import { Button } from "@material-ui/core";
 
-const baseUrl = process.env.PUBLIC_URL;
 
 class AuthView extends Component {
   render() {
@@ -12,7 +11,7 @@ class AuthView extends Component {
       <>
         <Button
           component={Link}
-          to={baseUrl+'/signIn'}
+          to={'/signIn'}
           variant='contained'
           size='large'
         >
@@ -21,7 +20,7 @@ class AuthView extends Component {
 
         <Button
           component={Link}
-          to={baseUrl+'/signUp'}
+          to={'/signUp'}
           variant='contained'
           size='large'
         >
