@@ -7,6 +7,8 @@ Check 'insights' for my contribution to original project.
 Database of events and users.
 User can sign in or sign up to add events and join them.
 
+Still needs some fixes on production version. 
+
 
 # -----------------------------------------------------------------
 
