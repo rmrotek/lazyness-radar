@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import firebase from 'firebase'
-import firebasecfg from "../firebasecfg";
+import firebasecfg from "../firebase/firebasecfg";
 
 
 const DataContext = React.createContext();
