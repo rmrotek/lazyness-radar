@@ -1,4 +1,10 @@
-'Group' project done during infoShare Academy Front-end bootcamp.
+# 'Group' project done during infoShare Academy Front-end bootcamp.
+Tech used: react, react-router, react-leaflet, firebase, material-ui.
+Data passed in contexts/HOC, fetching data done with a websocket.
+
+Check 'insights' for my contribution to original project. 
+
+# -----------------------------------------------------------------
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
