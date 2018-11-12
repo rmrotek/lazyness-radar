@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import firebase from 'firebase'
 import { Grid, TextField, Button } from "@material-ui/core";
 
+const baseUrl = process.env.PUBLIC_URL;
+
+
 const makeNewUser = (userId, { name, surname, email }) => {
   firebase.database().ref('users/' + userId).set({
     first_name: name,
@@ -63,7 +66,7 @@ class SignUpForm extends Component {
         makeNewUser(user.uid, this.state)
       }
     ).then(
-      () => this.props.history.push('/')
+      () => this.props.history.push(baseUrl+'/')
     ).catch(
       error => this.setState({ error: error.message })
     )
