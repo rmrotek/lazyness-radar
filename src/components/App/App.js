@@ -11,6 +11,7 @@ import { withAuthContext } from '../../contexts/AuthContext';
 import SignInForm from '../SignInForm/SignInForm';
 import EventCreateView from '../EventCreateView/EventCreateView';
 
+const baseUrl = process.env.PUBLIC_URL;
 class App extends Component {
 
   state = {
@@ -24,14 +25,16 @@ class App extends Component {
   handleClose = () => {
     this.setState({ anchorEl: null });
   };
+  
 
   render() {
     const { anchorEl } = this.state;
     const { user } = this.props.authContext;
 
     return (
+      
       <>
-        <Router basename={'/lazyness-radar'}>
+        <Router>
           <div >
             <AppBar position='static'>
               <Toolbar>
@@ -62,7 +65,7 @@ class App extends Component {
             >
               <MenuItem
                 component={NavLink}
-                exact to='/'
+                exact to={baseUrl+'/'}
                 onClick={this.handleClose}
               >
                 Home Page
@@ -70,7 +73,7 @@ class App extends Component {
               {user &&
                 <MenuItem
                   component={NavLink}
-                  to={`/user/${user.uid}`}
+                  to={`${baseUrl}/user/${user.uid}`}
                   onClick={this.handleClose}
                 >
                   User Profile
@@ -79,7 +82,7 @@ class App extends Component {
               {user &&
                 <MenuItem
                   component={NavLink}
-                  to={`/createEvent`}
+                  to={`${baseUrl}/createEvent`}
                   onClick={this.handleClose}
                 >
                   Create Event
@@ -96,17 +99,17 @@ class App extends Component {
 
             <Typography paragraph></Typography>
 
-            <Route exact path={`${process.env.PUBLIC_URL}/`} component={HomeView} />
-            <Route exact path={`${process.env.PUBLIC_URL}/user`} component={() => <h1> You shouldnt be here</h1>} />
-            <Route path={`${process.env.PUBLIC_URL}/user/:userId`} component={UserProfileView} />
+            <Route exact path={baseUrl + `/`} component={HomeView} />
+            <Route exact path={baseUrl + `/user`} component={() => <h1> You shouldnt be here</h1>} />
+            <Route path={baseUrl+ `/user/:userId`} component={UserProfileView} />
 
-            <Route exact path={`${process.env.PUBLIC_URL}/events`} component={() => <h1> You shouldnt be here </h1>} />
-            <Route path={`${process.env.PUBLIC_URL}/events/:eventId`} component={EventView} />
+            <Route exact path={baseUrl + `/events`} component={() => <h1> You shouldnt be here </h1>} />
+            <Route path={baseUrl+ `/events/:eventId`} component={EventView} />
 
-            <Route path={`${process.env.PUBLIC_URL}/createEvent`} component={EventCreateView} />
+            <Route path={baseUrl+ `/createEvent`} component={EventCreateView} />
 
-            <Route path={`${process.env.PUBLIC_URL}/signIn`} component={SignInForm} />
-            <Route path={`${process.env.PUBLIC_URL}/signUp`} component={SignUpForm} />
+            <Route path={baseUrl+ `/signIn`} component={SignInForm} />
+            <Route path={baseUrl+`/signUp`} component={SignUpForm} />
           </div>
         </Router>
       </>
