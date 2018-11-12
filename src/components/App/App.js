@@ -96,17 +96,17 @@ class App extends Component {
 
             <Typography paragraph></Typography>
 
-            <Route exact path="lazyness-radar/" component={HomeView} />
-            <Route exact path="/user" component={() => <h1> You shouldnt be here</h1>} />
-            <Route path="/user/:userId" component={UserProfileView} />
+            <Route exact path={`${process.env.PUBLIC_URL}/`} component={HomeView} />
+            <Route exact path={`${process.env.PUBLIC_URL}/user`} component={() => <h1> You shouldnt be here</h1>} />
+            <Route path={`${process.env.PUBLIC_URL}/user/:userId`} component={UserProfileView} />
 
-            <Route exact path="/events" component={() => <h1> You shouldnt be here </h1>} />
-            <Route path="/events/:eventId" component={EventView} />
+            <Route exact path={`${process.env.PUBLIC_URL}/events`} component={() => <h1> You shouldnt be here </h1>} />
+            <Route path={`${process.env.PUBLIC_URL}/events/:eventId`} component={EventView} />
 
-            <Route path="/createEvent" component={EventCreateView} />
+            <Route path={`${process.env.PUBLIC_URL}/createEvent`} component={EventCreateView} />
 
-            <Route path="/signIn" component={SignInForm} />
-            <Route path="/signUp" component={SignUpForm} />
+            <Route path={`${process.env.PUBLIC_URL}/signIn`} component={SignInForm} />
+            <Route path={`${process.env.PUBLIC_URL}/signUp`} component={SignUpForm} />
           </div>
         </Router>
       </>
