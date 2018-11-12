@@ -11,7 +11,6 @@ import { withAuthContext } from '../../contexts/AuthContext';
 import SignInForm from '../SignInForm/SignInForm';
 import EventCreateView from '../EventCreateView/EventCreateView';
 
-const baseUrl = process.env.PUBLIC_URL;
 class App extends Component {
 
   state = {
@@ -65,7 +64,7 @@ class App extends Component {
             >
               <MenuItem
                 component={NavLink}
-                exact to={baseUrl+'/'}
+                exact to={'/'}
                 onClick={this.handleClose}
               >
                 Home Page
@@ -73,7 +72,7 @@ class App extends Component {
               {user &&
                 <MenuItem
                   component={NavLink}
-                  to={`${baseUrl}/user/${user.uid}`}
+                  to={`/user/${user.uid}`}
                   onClick={this.handleClose}
                 >
                   User Profile
@@ -82,7 +81,7 @@ class App extends Component {
               {user &&
                 <MenuItem
                   component={NavLink}
-                  to={`${baseUrl}/createEvent`}
+                  to={`/createEvent`}
                   onClick={this.handleClose}
                 >
                   Create Event
@@ -99,17 +98,17 @@ class App extends Component {
 
             <Typography paragraph></Typography>
 
-            <Route exact path={baseUrl + `/`} component={HomeView} />
-            <Route exact path={baseUrl + `/user`} component={() => <h1> You shouldnt be here</h1>} />
-            <Route path={baseUrl+ `/user/:userId`} component={UserProfileView} />
+            <Route exact path={`/`} component={HomeView} />
+            <Route exact path={`/user`} component={() => <h1> You shouldnt be here</h1>} />
+            <Route path={`/user/:userId`} component={UserProfileView} />
 
-            <Route exact path={baseUrl + `/events`} component={() => <h1> You shouldnt be here </h1>} />
-            <Route path={baseUrl+ `/events/:eventId`} component={EventView} />
+            <Route exact path={`/events`} component={() => <h1> You shouldnt be here </h1>} />
+            <Route path={`/events/:eventId`} component={EventView} />
 
-            <Route path={baseUrl+ `/createEvent`} component={EventCreateView} />
+            <Route path={`/createEvent`} component={EventCreateView} />
 
-            <Route path={baseUrl+ `/signIn`} component={SignInForm} />
-            <Route path={baseUrl+`/signUp`} component={SignUpForm} />
+            <Route path={`/signIn`} component={SignInForm} />
+            <Route path={`/signUp`} component={SignUpForm} />
           </div>
         </Router>
       </>
